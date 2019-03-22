@@ -1,7 +1,9 @@
 import unittest
-from players import Player, Quarterback
+from players import Player, Quarterback, Defensive
 from possible_values import *
 from game import Game
+from season import generate_rand_games
+# import numpy as np
 # TODO - some things you can add...
 
 # import the `season` file and make sure generate_random_games only
@@ -13,9 +15,11 @@ from game import Game
 class FootballGameTest(unittest.TestCase):
     '''test the class'''
     def test_field_goal_made(self):
-        pass  # TODO
+        game = generate_rand_games(n=1)
+        print (game.teams())
+        # self.assertEqual(game.)
 
-    def test_get_winnerr(self):
+    def test_get_winner(self):
         pass  # TODO
 
 

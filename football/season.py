@@ -8,7 +8,7 @@ from random import randint, uniform, sample
 def generate_rand_games(n=15):
     '''Generate n random games using value lists in possible_values
     '''
-    # Begin with enpty list
+    # Begin with empty list
     games = []
 
     # For the specified number of games, create an instance of the Game
@@ -16,7 +16,7 @@ def generate_rand_games(n=15):
     # TODO - You can also include the location and week number if desired
     for _ in list(range(n)):
         # Get team names by sampling team_names from possible_values
-        game = Game(teams=sample(team_names, k=2))
+        game = Game(teams=sample(team_names, k=2), location=sample(locations, k=1))
 
         # Give each team a random number (from 0 to 3) of each:
         # touchdowns and field goals
@@ -103,3 +103,4 @@ def season_report(games):
 
 if __name__ == '__main__':
     season_report(generate_rand_games())
+
