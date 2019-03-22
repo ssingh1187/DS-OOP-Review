@@ -84,4 +84,4 @@ class Game:
         self.winning_team_ = k[v.index(max(v))]
         self.losing_team_ = k[v.index(min(v))]
 
-        return self.winning_team_, self.losing_team_
+        return self.winning_team_

@@ -15,12 +15,15 @@ from season import generate_rand_games
 class FootballGameTest(unittest.TestCase):
     '''test the class'''
     def test_field_goal_made(self):
-        game = generate_rand_games(n=1)
-        print (game.teams())
-        # self.assertEqual(game.)
+        game = Game(teams=['Redskins','Browns'])
+        game.field_goal('Redskins')
+        self.assertEqual(game.score['Redskins'], 3)
 
     def test_get_winner(self):
-        pass  # TODO
+        game = Game(teams=['Redskins','Browns'])
+        game.touchdown('Browns')
+        # print (game.get_winning_team())
+        self.assertEqual(game.get_winning_team(), 'Browns')
 
 
 class FootballPlayerTest(unittest.TestCase):
